@@ -75,19 +75,13 @@ internal class UnitConverterRepositoryImpl(
         query: String,
         includeCurrencies: Boolean
     ): UnitConverter? {
-<<<<<<< Updated upstream
-        if (!query.matches(Regex("[0-9,.:]+ [^\\s]+")) &&
-            !query.matches(Regex("[0-9,.:]+ [^\\s]+ >> [^\\s]+")) &&
-            !query.matches(Regex("[0-9,.:]+ [^\\s]+ > [^\\s]+")) &&
-            !query.matches(Regex("[0-9,.:]+ [^\\s]+ - [^\\s]+"))) return null
-=======
+
         if (!query.matches(Regex("[0-9,.:]+(\\s)?[^\\s]+")) &&
             !query.matches(Regex("[0-9,.:]+(\\s)?[^\\s]+ >> [^\\s]+")) &&
             !query.matches(Regex("[0-9,.:]+(\\s)?[^\\s]+ > [^\\s]+")) &&
             !query.matches(Regex("[0-9,.:]+(\\s)?[^\\s]+ to [^\\s]+")) &&
             !query.matches(Regex("[0-9,.:]+(\\s)?[^\\s]+ [^\\s]+")) &&
             !query.matches(Regex("[0-9,.:]+(\\s)?[^\\s]+ - [^\\s]+"))) return null
->>>>>>> Stashed changes
         val valueStr: String
         val unitStr: String
         val targetUnitStr: String?
